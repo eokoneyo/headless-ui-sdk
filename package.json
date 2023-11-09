@@ -24,7 +24,6 @@
     "pinst": "^3.0.0",
     "prettier": "^3.0.3"
   },
-  "packageManager": "yarn@4.0.1",
   "prettier": {
     "editorconfig": true,
     "singleQuote": true,
@@ -33,5 +32,6 @@
   "lint-staged": {
     "./**/*.(c|m)?js": "eslint --cache --fix --max-warnings 0",
     "./**/*.{js,json}": "prettier --write"
-  }
+  },
+  "packageManager": "yarn@4.0.1"
 }
