@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headless UI SDK Experiment</title>
+</head>
+
+<body>
+    <script type="importmap">
+            {
+                "imports": {
+                    "@remote-ui/async-subscription": "/node_modules/@remote-ui/async-subscription/index.mjs",
+                    "@remote-ui/rpc": "/node_modules/@remote-ui/rpc/index.mjs",
+                    "jotai": "/node_modules/jotai/esm/vanilla.mjs",
+                    "jotai/utils": "/node_modules/jotai/esm/vanilla/utils.mjs"
+                }
+            }
+        </script>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
