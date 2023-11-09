@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en' xmlns='http://www.w3.org/1999/html' xmlns='http://www.w3.org/1999/html'
+      xmlns='http://www.w3.org/1999/html' xmlns='http://www.w3.org/1999/html' xmlns='http://www.w3.org/1999/html'>
 
 <head>
     <meta charset="UTF-8">
@@ -8,12 +9,31 @@
 </head>
 
 <body>
+    <p>Access state from remote like so;</p>
+    <code>
+      import { createEndpoint, fromIframe } from '@remote-ui/rpc'; </br>
+      </br>
+      const createIframe = (iframeSrc) => { </br>
+        &nbsp;const iframe = document.createElement('iframe'); </br>
+        &nbsp;iframe.setAttribute('src', iframeSrc); </br>
+        &nbsp;document.body.appendChild(iframe); </br>
+        &nbsp;return iframe; </br>
+      } </br>
+      </br>
+      const endpoint = createEndpoint(createIframe('http://localhost:3000')); </br>
+      </br>
+      void (async () => {</br>
+        &nbsp;const remoteState = await endpoint.call.init();</br>
+        &nbsp;// use remote state </br>
+      })();</br>
+    </code>
     <script type="importmap">
             {
                 "imports": {
                     "@remote-ui/async-subscription": "/node_modules/@remote-ui/async-subscription/index.mjs",
                     "@remote-ui/rpc": "/node_modules/@remote-ui/rpc/index.mjs",
                     "jotai": "/node_modules/jotai/esm/vanilla.mjs",
+                    "jotai/vanilla": "/node_modules/jotai/esm/vanilla.mjs",
                     "jotai/utils": "/node_modules/jotai/esm/vanilla/utils.mjs"
                 }
             }

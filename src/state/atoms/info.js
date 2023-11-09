@@ -1,3 +1,3 @@
-import { atom } from 'jotai/utils';
+import { atom } from 'jotai';
 
-export const infoAtom = atom();
+export const infoAtom = atom({});
